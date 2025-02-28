@@ -1,3 +1,4 @@
+'use client';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Slider } from "@/components/ui/slider"
@@ -27,8 +28,8 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Wallet className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">LoanEase</span>
+            <Wallet className="h-6 w-6 text-primaryColor" />
+            <span className="text-xl font-bold text-primaryColor">Eazicred</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#" className="text-sm font-medium hover:text-primary">
@@ -61,7 +62,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primaryColor">
                     Fast & Flexible Loans for Every Need
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -73,21 +74,21 @@ export default function Home() {
                   <Button size="lg" className="gap-1 bg-primaryColor text-white">
                     Apply Now <ArrowRight className="h-4 w-4" />
                   </Button>
-                  <Button size="lg" variant="outline">
+                  <Button size="lg" variant="outline" className="border-primaryColor text-primaryColor">
                     Calculate Your Rate
                   </Button>
                 </div>
                 <div className="flex items-center gap-4 text-sm">
                   <div className="flex items-center gap-1">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <CheckCircle className="h-4 w-4 text-primaryColor" />
                     <span>No hidden fees</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <CheckCircle className="h-4 w-4 text-primaryColor" />
                     <span>Secure process</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <CheckCircle className="h-4 w-4 text-primaryColor" />
                     <span>Fast approval</span>
                   </div>
                 </div>
@@ -105,43 +106,47 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
+                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold text-primaryColor border-primaryColor">
                   Why Choose Us
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Lending Made Simple</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primaryColor">Lending Made Simple</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   We've streamlined the loan process to make borrowing easier, faster, and more transparent.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-3">
-              <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
+
+              <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 border-primaryColor">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Clock className="h-6 w-6 text-primary" />
+                  <Clock className="h-6 w-6 text-primaryColor" />
                 </div>
-                <h3 className="text-xl font-bold">Quick Application</h3>
+                <h3 className="text-xl font-bold text-primaryColor">Quick Application</h3>
                 <p className="text-center text-muted-foreground">
                   Complete our simple online application in as little as 5 minutes.
                 </p>
               </div>
-              <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
+
+              <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 border-primaryColor">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Shield className="h-6 w-6 text-primary" />
+                  <Shield className="h-6 w-6 text-primaryColor" />
                 </div>
-                <h3 className="text-xl font-bold">Secure Process</h3>
+                <h3 className="text-xl font-bold text-primaryColor">Secure Process</h3>
                 <p className="text-center text-muted-foreground">
                   Your data is protected with bank-level security and encryption.
                 </p>
               </div>
-              <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
+
+              <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 border-primaryColor">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <DollarSign className="h-6 w-6 text-primary" />
+                  <DollarSign className="h-6 w-6 text-primaryColor" />
                 </div>
-                <h3 className="text-xl font-bold">Competitive Rates</h3>
+                <h3 className="text-xl font-bold text-primaryColor">Competitive Rates</h3>
                 <p className="text-center text-muted-foreground">
                   Get access to competitive interest rates and flexible repayment terms.
                 </p>
               </div>
+
             </div>
           </div>
         </section>
@@ -151,10 +156,10 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-flex items-center rounded-full border bg-background px-2.5 py-0.5 text-xs font-semibold">
+                  <div className="inline-flex items-center rounded-full border bg-background px-2.5 py-0.5 text-xs font-semibold border-primaryColor text-primaryColor">
                     How It Works
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primaryColor">
                     Three Simple Steps to Get Your Loan
                   </h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -167,7 +172,7 @@ export default function Home() {
                       1
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-xl font-bold">Apply Online</h3>
+                      <h3 className="text-xl font-bold text-primaryColor">Apply Online</h3>
                       <p className="text-muted-foreground">
                         Fill out our simple application form with your personal and financial details.
                       </p>
@@ -178,7 +183,7 @@ export default function Home() {
                       2
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-xl font-bold">Get Approved</h3>
+                      <h3 className="text-xl font-bold text-primaryColor">Get Approved</h3>
                       <p className="text-muted-foreground">
                         Receive a decision quickly, often within minutes. We'll review your application and provide loan
                         options.
@@ -190,7 +195,7 @@ export default function Home() {
                       3
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-xl font-bold">Receive Funds</h3>
+                      <h3 className="text-xl font-bold text-primaryColor">Receive Funds</h3>
                       <p className="text-muted-foreground">
                         Once approved, funds can be deposited directly into your bank account as soon as the next
                         business day.
@@ -199,14 +204,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <Button className="gap-1">
-                    Start Your Application <ChevronRight className="h-4 w-4" />
+                  <Button className="gap-1 text-primaryColor">
+                    Start Your Application <ChevronRight className="h-4 w-4 text-primaryColor" />
                   </Button>
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/pay.svg"
                   width={500}
                   height={500}
                   alt="Loan application process"
@@ -221,18 +226,18 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Loan Options for Every Need</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primaryColor">Loan Options for Every Need</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Explore our range of loan products designed to meet your specific financial needs.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-3">
-              <Card>
-                <CardContent className="p-6">
+              <Card className="border-primaryColor">
+                <CardContent className="p-6 border-primaryColor">
                   <div className="flex flex-col items-center space-y-4">
-                    <CreditCard className="h-12 w-12 text-primary" />
-                    <h3 className="text-xl font-bold">Personal Loans</h3>
+                    <CreditCard className="h-12 w-12 text-primaryColor" />
+                    <h3 className="text-xl font-bold text-primaryColor">Personal Loans</h3>
                     <p className="text-center text-muted-foreground">$1,000 - $50,000</p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center gap-2">
@@ -256,11 +261,12 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-              <Card>
+
+              <Card className="border-primaryColor">
                 <CardContent className="p-6">
                   <div className="flex flex-col items-center space-y-4">
-                    <Wallet className="h-12 w-12 text-primary" />
-                    <h3 className="text-xl font-bold">Business Loans</h3>
+                    <Wallet className="h-12 w-12 text-primaryColor" />
+                    <h3 className="text-xl font-bold text-primaryColor">Business Loans</h3>
                     <p className="text-center text-muted-foreground">$10,000 - $500,000</p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center gap-2">
@@ -284,11 +290,12 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-              <Card>
+
+              <Card className="border-primaryColor">
                 <CardContent className="p-6">
                   <div className="flex flex-col items-center space-y-4">
-                    <Lock className="h-12 w-12 text-primary" />
-                    <h3 className="text-xl font-bold">Secured Loans</h3>
+                    <Lock className="h-12 w-12 text-primaryColor" />
+                    <h3 className="text-xl font-bold text-primaryColor">Secured Loans</h3>
                     <p className="text-center text-muted-foreground">$5,000 - $250,000</p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center gap-2">
@@ -320,10 +327,10 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-flex items-center rounded-full border bg-background px-2.5 py-0.5 text-xs font-semibold">
+                <div className="inline-flex items-center rounded-full border bg-background px-2.5 py-0.5 text-xs font-semibold text-primaryColor border-primaryColor">
                   Testimonials
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Customers Say</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primaryColor">What Our Customers Say</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Don't just take our word for it. Here's what our customers have to say about their experience.
                 </p>
@@ -337,7 +344,7 @@ export default function Home() {
                       {Array(5)
                         .fill(0)
                         .map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                          <Star key={i} className="h-5 w-5 fill-primaryColor text-primaryColor" />
                         ))}
                     </div>
                     <p className="text-muted-foreground">
@@ -369,7 +376,7 @@ export default function Home() {
                       {Array(5)
                         .fill(0)
                         .map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                          <Star key={i} className="h-5 w-5 fill-primaryColor text-primaryColor" />
                         ))}
                     </div>
                     <p className="text-muted-foreground">
@@ -401,7 +408,7 @@ export default function Home() {
                       {Array(5)
                         .fill(0)
                         .map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                          <Star key={i} className="h-5 w-5 fill-primaryColor text-primaryColor" />
                         ))}
                     </div>
                     <p className="text-muted-foreground">
@@ -434,7 +441,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Frequently Asked Questions</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primaryColor">Frequently Asked Questions</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Find answers to common questions about our loan products and application process.
                 </p>
@@ -443,7 +450,7 @@ export default function Home() {
             <div className="mx-auto max-w-3xl py-12">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>How do I qualify for a loan?</AccordionTrigger>
+                  <AccordionTrigger className="text-primaryColor font-semibold" >How do I qualify for a loan?</AccordionTrigger>
                   <AccordionContent>
                     Qualification criteria vary by loan type, but generally include factors such as credit score,
                     income, employment history, and debt-to-income ratio. We consider multiple factors beyond just
@@ -451,7 +458,7 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>How long does the application process take?</AccordionTrigger>
+                  <AccordionTrigger className="text-primaryColor font-semibold" >How long does the application process take?</AccordionTrigger>
                   <AccordionContent>
                     Our online application takes as little as 5 minutes to complete. Most applicants receive a decision
                     within minutes, and if approved, funds can be deposited as soon as the next business day after all
@@ -459,7 +466,7 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>What interest rates do you offer?</AccordionTrigger>
+                  <AccordionTrigger className="text-primaryColor font-semibold" >What interest rates do you offer?</AccordionTrigger>
                   <AccordionContent>
                     Interest rates vary based on loan type, amount, term, and your credit profile. Our rates are
                     competitive and personalized based on your specific situation. You can check your rate without
@@ -467,7 +474,7 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>Are there any fees associated with your loans?</AccordionTrigger>
+                  <AccordionTrigger className="text-primaryColor font-semibold" >Are there any fees associated with your loans?</AccordionTrigger>
                   <AccordionContent>
                     We pride ourselves on transparency. Some loans may include an origination fee, which is clearly
                     disclosed before you accept the loan. There are no hidden fees, no application fees, and no
@@ -475,14 +482,14 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-5">
-                  <AccordionTrigger>Can I pay off my loan early?</AccordionTrigger>
+                  <AccordionTrigger className="text-primaryColor font-semibold" >Can I pay off my loan early?</AccordionTrigger>
                   <AccordionContent>
                     Yes, you can pay off your loan at any time with no prepayment penalties. Making extra payments or
                     paying off your loan early can save you money on interest over the life of the loan.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-6">
-                  <AccordionTrigger>What if I have bad credit?</AccordionTrigger>
+                  <AccordionTrigger className="text-primaryColor font-semibold" >What if I have bad credit?</AccordionTrigger>
                   <AccordionContent>
                     We work with borrowers across the credit spectrum. While having good credit can help you qualify for
                     better rates, we consider multiple factors beyond just credit score. We offer options for those with
