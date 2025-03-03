@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { CheckCircle, ChevronRight } from "lucide-react"
 import { Slider } from "@/components/ui/slider"
 import Header from "@/components/custom/Header"
+import Image from "next/image"
 
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
         </section>
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Why Choose LoanSwift</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Why Choose Eazicred</h2>
             <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
               <Card>
                 <CardHeader>
@@ -129,7 +129,7 @@ export default function Home() {
               <Card>
                 <CardContent className="pt-10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <img
+                    <Image
                       src="/placeholder.svg?height=40&width=40"
                       alt="Sarah J."
                       className="rounded-full"
@@ -142,15 +142,15 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400">
-                    "The application process was incredibly smooth, and I received my funds within 24 hours. Highly
-                    recommended!"
+                    The application process was incredibly smooth, and I received my funds within 24 hours. Highly
+                    recommended!
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="pt-10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <img
+                    <Image
                       src="/placeholder.svg?height=40&width=40"
                       alt="Michael R."
                       className="rounded-full"
@@ -163,14 +163,14 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400">
-                    "LoanSwift provided the capital I needed to expand my business. Their rates were unbeatable."
+                    Eazicred provided the capital I needed to expand my business. Their rates were unbeatable.
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="pt-10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <img
+                    <Image
                       src="/placeholder.svg?height=40&width=40"
                       alt="Emily T."
                       className="rounded-full"
@@ -183,8 +183,8 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400">
-                    "Thanks to LoanSwift, we were able to renovate our kitchen without touching our savings. Great
-                    service!"
+                    Thanks to Eazicred, we were able to renovate our kitchen without touching our savings. Great
+                    service!
                   </p>
                 </CardContent>
               </Card>
@@ -261,7 +261,7 @@ export default function Home() {
               </div>
               <Button className="w-full">Check Your Rate</Button>
               <p className="text-xs text-center text-zinc-500 dark:text-zinc-400">
-                Checking your rate won't affect your credit score
+                Checking your rate won&apos;t affect your credit score
               </p>
             </div>
           </div>
@@ -344,10 +344,10 @@ export default function Home() {
             <div className="flex flex-col space-y-4">
               <Link className="flex items-center space-x-2" href="/">
                 <Wallet className="h-6 w-6" />
-                <span className="font-bold">LoanSwift</span>
+                <span className="font-bold">Eazicred</span>
               </Link>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Fast, flexible loans for your future. LoanSwift is a financial technology company, not a bank.
+                Fast, flexible loans for your future. Eazicred is a financial technology company, not a bank.
               </p>
               <div className="flex space-x-4">
                 <Link
@@ -430,7 +430,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2023 LoanSwift. All rights reserved.
+            © 2023 Eazicred. All rights reserved.
           </div>
         </div>
       </footer>

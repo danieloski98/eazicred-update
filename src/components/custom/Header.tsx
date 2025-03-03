@@ -1,4 +1,4 @@
-import { Wallet } from 'lucide-react'
+import { Wallet, Menu } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../ui/button'
@@ -20,7 +20,7 @@ function Header() {
             <Link href="/investments" className="text-sm font-medium hover:text-primary">
                 Investments
             </Link>
-            <Link href="/advisor-service" className="text-sm font-medium text-primary">
+            <Link  href="/advisor-service" className="text-sm font-medium hover:text-primary">
               Advisor Services
             </Link>
             <Link href="/contact" className="text-sm font-medium hover:text-primary">
@@ -28,8 +28,8 @@ function Header() {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Button variant="outline">Sign In</Button>
             <Button>Get Started</Button>
+            <Menu size={25} className='text-primary lg:hidden sm:block' />
           </div>
         </div>
       </header>

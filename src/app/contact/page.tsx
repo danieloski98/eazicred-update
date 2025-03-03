@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "sonner"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, MapPin, Phone, Send, Wallet } from "lucide-react"
+import { Mail, MapPin, Phone, Send } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
@@ -23,7 +23,7 @@ export default function ContactUs() {
     // Here you would typically send the form data to your backend
     console.log({ name, email, message })
     toast("Message Sent",  {
-        description: "We've received your message and will get back to you soon."
+        description: "Weve received your message and will get back to you soon."
     });
 
     setName("")
@@ -42,7 +42,7 @@ export default function ContactUs() {
                 Get in Touch
               </h1>
               <p className="mx-auto max-w-[700px] text-zinc-500 md:text-xl dark:text-zinc-400">
-                We're here to help. Send us a message and we'll respond as soon as possible.
+                We&apos;re here to help. Send us a message and we&apos;ll respond as soon as possible.
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2">

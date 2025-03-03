@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { BookOpen, Handshake, PieChart, Wallet } from "lucide-react"
+import { BookOpen, Handshake, PieChart } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
 
@@ -119,7 +119,7 @@ export default function AdvisorServices() {
               <div className="flex flex-col space-y-4">
                 <h3 className="text-xl font-bold">Ongoing Support</h3>
                 <p className="text-zinc-500 dark:text-zinc-400">
-                  We're here for you long-term, helping you adjust your financial strategy as your life changes.
+                  We&apos;re here for you long-term, helping you adjust your financial strategy as your life changes.
                 </p>
               </div>
             </div>
@@ -164,16 +164,16 @@ export default function AdvisorServices() {
                 <AccordionItem value="item-1">
                   <AccordionTrigger>How much does a consultation cost?</AccordionTrigger>
                   <AccordionContent>
-                    Your initial consultation is completely free. During this session, we'll discuss your financial
+                    Your initial consultation is completely free. During this session, we&apos;ll discuss your financial
                     situation and goals, and determine how our services can best help you.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
                   <AccordionTrigger>What should I prepare for my first meeting?</AccordionTrigger>
                   <AccordionContent>
-                    For your first meeting, it's helpful to bring recent financial statements, information about your
-                    income and expenses, and any specific financial questions or goals you have. Don't worry if you
-                    don't have everything – we can guide you through the process.
+                    For your first meeting, it&apos;s helpful to bring recent financial statements, information about your
+                    income and expenses, and any specific financial questions or goals you have. Don&apos;t worry if you
+                    don&apos;t have everything – we can guide you through the process.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
@@ -185,10 +185,10 @@ export default function AdvisorServices() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>Can I change my advisor if I'm not satisfied?</AccordionTrigger>
+                  <AccordionTrigger>Can I change my advisor if I&apos;m not satisfied?</AccordionTrigger>
                   <AccordionContent>
                     Absolutely. We want you to feel comfortable and confident with your advisor. If you feel that
-                    another advisor might be a better fit, we're happy to arrange a switch at any time.
+                    another advisor might be a better fit, we&apos;re happy to arrange a switch at any time.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
