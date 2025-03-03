@@ -9,10 +9,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { BarChart, Calendar, DollarSign, PieChart, Wallet } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
+import { useContactModal } from "@/hooks/use-contact-modal"
+import { ContactModal } from "@/components/custom/ContactModal"
 
 export default function Investments() {
   const [amount, setAmount] = useState(1000)
   const [term, setTerm] = useState("annual")
+  const { isOpen, openModal, closeModal } = useContactModal();
+
 
   const calculateReturns = () => {
     if (term === "annual") {
@@ -25,7 +29,10 @@ export default function Investments() {
   return (
     <div className="flex min-h-screen flex-col">
 
-    <Header />
+      <ContactModal isOpen={isOpen} onClose={() => closeModal()} />
+
+
+      <Header />
 
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
@@ -38,10 +45,10 @@ export default function Investments() {
                 Choose from our competitive investment options and watch your money grow.
               </p>
               <div className="space-x-4">
-                <Button size="lg">Start Investing</Button>
-                <Button variant="outline" size="lg">
+                <Button size="lg" onClick={openModal}>Start Investing</Button>
+                {/* <Button variant="outline" size="lg">
                   Learn More
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -74,7 +81,7 @@ export default function Investments() {
                     <li>Monthly interest payouts available</li>
                     <li>Reinvestment options</li>
                   </ul>
-                  <Button className="w-full mt-4">Invest Now</Button>
+                  <Button onClick={openModal} className="w-full mt-4">Invest Now</Button>
                 </CardContent>
               </Card>
               <Card>
@@ -93,7 +100,7 @@ export default function Investments() {
                     <li>Interest paid at maturity</li>
                     <li>Early withdrawal options available</li>
                   </ul>
-                  <Button className="w-full mt-4">Invest Now</Button>
+                  <Button onClick={openModal} className="w-full mt-4">Invest Now</Button>
                 </CardContent>
               </Card>
             </div>
@@ -140,7 +147,7 @@ export default function Investments() {
                       <p className="text-3xl font-bold text-primary">${calculateReturns().toFixed(2)}</p>
                       <p className="text-sm text-zinc-500">*This is an estimate. Actual returns may vary.</p>
                     </div>
-                    <Button className="w-full">Start Investing</Button>
+                    <Button onClick={openModal} className="w-full">Start Investing</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -159,7 +166,7 @@ export default function Investments() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-              <Card className="bg-primary-foreground text-primary">
+              <Card className="bg-primary-foreground text-primary h-44">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <PieChart className="h-6 w-6" />
@@ -170,7 +177,7 @@ export default function Investments() {
                   Our investment options offer some of the most competitive returns in the market.
                 </CardContent>
               </Card>
-              <Card className="bg-primary-foreground text-primary">
+              <Card className="bg-primary-foreground text-primary h-44">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <DollarSign className="h-6 w-6" />
@@ -179,7 +186,7 @@ export default function Investments() {
                 </CardHeader>
                 <CardContent>Start investing with as little as $500 and grow your wealth over time.</CardContent>
               </Card>
-              <Card className="bg-primary-foreground text-primary">
+              <Card className="bg-primary-foreground text-primary h-44">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Wallet className="h-6 w-6" />
@@ -247,8 +254,8 @@ export default function Investments() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg">Open an Investment Account</Button>
-                <Button variant="outline" size="lg">
+                <Button size="lg" onClick={openModal}>Open an Investment Account</Button>
+                <Button variant="outline" size="lg" onClick={openModal}>
                   Speak to an Advisor
                 </Button>
               </div>

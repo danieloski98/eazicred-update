@@ -22,8 +22,8 @@ export default function ContactUs() {
     e.preventDefault()
     // Here you would typically send the form data to your backend
     console.log({ name, email, message })
-    toast("Message Sent",  {
-        description: "Weve received your message and will get back to you soon."
+    toast("Message Sent", {
+      description: "Weve received your message and will get back to you soon."
     });
 
     setName("")
@@ -106,7 +106,7 @@ export default function ContactUs() {
                   </form>
                 </CardContent>
               </Card>
-              <div className="space-y-8">
+              <div className="space-y-4 mt-10">
                 <div>
                   <h2 className="text-2xl font-bold mb-4">Other Ways to Reach Us</h2>
                   <div className="space-y-4">

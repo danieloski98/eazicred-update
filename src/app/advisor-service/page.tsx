@@ -1,13 +1,19 @@
+'use client';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { BookOpen, Handshake, PieChart } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
+import { ContactModal } from "@/components/custom/ContactModal"
+import { useContactModal } from "@/hooks/use-contact-modal"
 
 export default function AdvisorServices() {
+  const { isOpen, openModal, closeModal } = useContactModal();
   return (
     <div className="flex min-h-screen flex-col">
+
+      <ContactModal isOpen={isOpen} onClose={() => closeModal()} />
 
       <Header />
 
@@ -23,10 +29,10 @@ export default function AdvisorServices() {
                 goals.
               </p>
               <div className="space-x-4">
-                <Button size="lg">Book a Consultation</Button>
-                <Button variant="outline" size="lg">
+                <Button size="lg" onClick={openModal}>Book a Consultation</Button>
+                {/* <Button variant="outline" size="lg">
                   Learn More
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -43,7 +49,7 @@ export default function AdvisorServices() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-              <Card>
+              <Card className="h-40">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <PieChart className="h-6 w-6 text-primary" />
@@ -56,7 +62,7 @@ export default function AdvisorServices() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="h-40">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Handshake className="h-6 w-6 text-primary" />
@@ -69,7 +75,7 @@ export default function AdvisorServices() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="h-40">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BookOpen className="h-6 w-6 text-primary" />
@@ -138,12 +144,12 @@ export default function AdvisorServices() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button variant="secondary" size="lg">
+                <Button variant="secondary" size="lg" onClick={openModal}>
                   Book Appointment
                 </Button>
-                <Button variant="outline" size="lg">
+                {/* <Button variant="outline" size="lg">
                   View Advisor Profiles
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
