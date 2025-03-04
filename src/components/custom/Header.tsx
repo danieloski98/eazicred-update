@@ -46,7 +46,9 @@ function Header() {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <Button>Get Started</Button>
+          <Link href={'/application'}>
+            <Button>Get Started</Button>
+          </Link>
           <Drawer direction='left' modal={false} onClose={() => setOpen(false)} open={open} dismissible >
             <DrawerTrigger asChild>
               <Menu size={25} className='text-primary lg:hidden sm:block cursor-pointer' onClick={() => setOpen(!open)} />
@@ -73,7 +75,9 @@ function Header() {
                 </div>
               </DrawerDescription>
               <DrawerFooter>
-                <Button>Get Started</Button>
+                <Link href={'/application'}>
+                  <Button>Get Started</Button>
+                </Link>
               </DrawerFooter>
             </DrawerContent>
           </Drawer>

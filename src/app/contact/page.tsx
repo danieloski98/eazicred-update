@@ -1,35 +1,15 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "sonner"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, MapPin, Phone, Send } from "lucide-react"
-import Image from "next/image"
+import { Mail, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
 
 export default function ContactUs() {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log({ name, email, message })
-    toast("Message Sent", {
-      description: "Weve received your message and will get back to you soon."
-    });
 
-    setName("")
-    setEmail("")
-    setMessage("")
-  }
+
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -45,65 +25,16 @@ export default function ContactUs() {
                 We&apos;re here to help. Send us a message and we&apos;ll respond as soon as possible.
               </p>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-5xl sm:w-full  items-center gap-6 py-12 lg:grid-cols-2">
               <Card>
                 <CardHeader>
                   <CardTitle>Contact Us</CardTitle>
                   <CardDescription>Fill out the form below to send us a message.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="name"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Full Name
-                      </label>
-                      <Input
-                        id="name"
-                        placeholder="Enter your full name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="email"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="message"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        placeholder="Enter your message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <Button type="submit" className="w-full">
-                      Send Message
-                      <Send className="ml-2 h-4 w-4" />
-                    </Button>
-                  </form>
+
+                  <iframe width="100%" style={{ minHeight: '500px', padding: '5px' }} allowFullScreen src="https://x.loandisk.com/form_api/iframe.php?formSlug=REPjUVylX0YT3FArd7wtioxOfgekCh"></iframe>
+
                 </CardContent>
               </Card>
               <div className="space-y-4 mt-10">
@@ -112,28 +43,19 @@ export default function ContactUs() {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2">
                       <Phone className="h-5 w-5 text-primary" />
-                      <span>+1 (555) 123-4567</span>
+                      <span>+234 802 074 0286</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="h-5 w-5 text-primary" />
-                      <span>support@Eazicred.com</span>
+                      <span>contact@eazicred.com</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <MapPin className="h-5 w-5 text-primary" />
-                      <span>123 Finance St, Money City, MC 12345</span>
+                      <span>Address: Standard Alliance BuildingPlot 1, Block 94 Providence street,Lekki Phase 1, Lagos,</span>
                     </div>
                   </div>
                 </div>
-                <div>
-                  <h2 className="text-2xl font-bold mb-4">Our Offices</h2>
-                  <Image
-                    src="/placeholder.svg?height=300&width=400"
-                    alt="Map of our offices"
-                    width={400}
-                    height={300}
-                    className="rounded-lg"
-                  />
-                </div>
+
               </div>
             </div>
           </div>

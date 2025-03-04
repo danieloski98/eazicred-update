@@ -27,16 +27,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
-                  Start Your Application
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
-                >
-                  Learn More
-                </Button>
+                <Link href={'/application'}>
+                  <Button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
+                    Start Your Application
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+
               </div>
             </div>
           </div>
@@ -130,7 +127,7 @@ export default function Home() {
                 <CardContent className="pt-10">
                   <div className="flex items-center space-x-4 mb-4">
                     <Image
-                      src="/placeholder.svg?height=40&width=40"
+                      src="https://via.placeholder.com/40"
                       alt="Sarah J."
                       className="rounded-full"
                       width={40}
@@ -323,10 +320,12 @@ export default function Home() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
-                  Start Your Application
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href={'/application'}>
+                  <Button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
+                    Start Your Application
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
                 <Link href={'/contact'}>
                   <Button
                     variant="outline"
@@ -415,12 +414,7 @@ export default function Home() {
               <div>
                 <h3 className="font-semibold">Company</h3>
                 <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
-                    About Us
-                  </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
-                    Careers
-                  </Link>
+
                   <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
                     Contact
                   </Link>

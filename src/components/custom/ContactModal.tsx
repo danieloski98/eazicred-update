@@ -17,7 +17,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <span className="font-medium">Phone:</span>
-            <span className="col-span-3">+234 123 456 7890</span>
+            <span className="col-span-3">+234 802 074 0286</span>
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <span className="font-medium">Email:</span>
@@ -25,7 +25,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <span className="font-medium">Address:</span>
-            <span className="col-span-3">123 Finance Street, Lagos, Nigeria</span>
+            <span className="col-span-3">Address: Standard Alliance BuildingPlot 1, Block 94 Providence street,Lekki Phase 1,Lagos,</span>
           </div>
         </div>
         <div className="flex justify-end">
