@@ -1,16 +1,18 @@
+'use client'
+import React from 'react';
 import Link from "next/link"
-import { ArrowRight, DollarSign, Gauge, Shield, Wallet } from "lucide-react"
+import { ArrowRight, BriefcaseBusiness, Gauge, Shield, Wallet } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
 import Header from "@/components/custom/Header"
-import Image from "next/image"
 
 
 export default function Home() {
+  const [loanAmount, setLoanAmount] = React.useState(10000);
+  const [loanPeriod, setLoanPeriod] = React.useState(3)
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -23,7 +25,7 @@ export default function Home() {
                   Fast, Flexible Loans for Your Future
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Get the funds you need with competitive rates and a seamless online application process.
+                  Get the funding you need with competitive rates and a seamless online application process.
                 </p>
               </div>
               <div className="space-x-4">
@@ -60,7 +62,7 @@ export default function Home() {
               </Card>
               <Card>
                 <CardHeader>
-                  <DollarSign className="h-10 w-10 mb-4 text-primary" />
+                  <BriefcaseBusiness className="h-10 w-10 mb-4 text-primary" />
                   <CardTitle>Competitive Rates</CardTitle>
                 </CardHeader>
                 <CardContent>We offer some of the most competitive interest rates in the industry.</CardContent>
@@ -79,10 +81,9 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Borrow up to $50,000</li>
-                    <li>Fixed interest rates</li>
-                    <li>Terms up to 60 months</li>
-                    <li>No collateral required</li>
+                    <li>Borrow up to NGN2,000,000</li>
+                    <li>Flexible repayment period</li>
+                    <li>Terms up to 12 months</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -93,7 +94,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Borrow up to $250,000</li>
+                    <li>Borrow up to NGN10,000,000</li>
                     <li>Flexible repayment terms</li>
                     <li>Quick access to funds</li>
                     <li>Tailored for small to medium businesses</li>
@@ -102,15 +103,14 @@ export default function Home() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Home Improvement Loans</CardTitle>
-                  <CardDescription>Transform your living space</CardDescription>
+                  <CardTitle>Asset Financing Loans</CardTitle>
+                  <CardDescription>Finance fixed assets</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Borrow up to $100,000</li>
+                    <li>Borrow up to NGN10,000,000</li>
                     <li>Competitive interest rates</li>
-                    <li>No home equity required</li>
-                    <li>Fast funding for your projects</li>
+                    <li>Collaterize the asset againts your loan</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -126,15 +126,9 @@ export default function Home() {
               <Card>
                 <CardContent className="pt-10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <Image
-                      src="https://via.placeholder.com/40"
-                      alt="Sarah J."
-                      className="rounded-full"
-                      width={40}
-                      height={40}
-                    />
+
                     <div>
-                      <h3 className="font-semibold">Sarah J.</h3>
+                      <h3 className="font-semibold">Abereniboye John J.</h3>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Personal Loan Customer</p>
                     </div>
                   </div>
@@ -147,15 +141,9 @@ export default function Home() {
               <Card>
                 <CardContent className="pt-10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <Image
-                      src="/placeholder.svg?height=40&width=40"
-                      alt="Michael R."
-                      className="rounded-full"
-                      width={40}
-                      height={40}
-                    />
+
                     <div>
-                      <h3 className="font-semibold">Michael R.</h3>
+                      <h3 className="font-semibold">Emeka and sons INC.</h3>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Business Loan Customer</p>
                     </div>
                   </div>
@@ -167,21 +155,14 @@ export default function Home() {
               <Card>
                 <CardContent className="pt-10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <Image
-                      src="/placeholder.svg?height=40&width=40"
-                      alt="Emily T."
-                      className="rounded-full"
-                      width={40}
-                      height={40}
-                    />
+
                     <div>
-                      <h3 className="font-semibold">Emily T.</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Home Improvement Loan Customer</p>
+                      <h3 className="font-semibold">Balogun Ayodeji</h3>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Assets financing loan customer</p>
                     </div>
                   </div>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Thanks to Eazicred, we were able to renovate our kitchen without touching our savings. Great
-                    service!
+                    I was able to finance my car and the repayment period was flexible and straight forward
                   </p>
                 </CardContent>
               </Card>
@@ -230,31 +211,36 @@ export default function Home() {
             <div className="mx-auto max-w-sm space-y-6 py-12">
               <div className="space-y-2">
                 <label htmlFor="loan-amount" className="text-sm font-medium">
-                  Loan Amount: $25,000
+                  Loan Amount: {loanAmount.toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}
                 </label>
-                <Slider id="loan-amount" defaultValue={[25000]} max={100000} step={1000} />
+                <Slider
+                  id="loan-amount"
+                  defaultValue={[1000]}
+                  value={[loanAmount]}
+                  max={10000000}
+                  step={1000}
+                  onValueChange={(value) => setLoanAmount(value[0])}
+                />
               </div>
               <div className="space-y-2">
                 <label htmlFor="loan-term" className="text-sm font-medium">
-                  Loan Term: 36 months
+                  Loan Term: {loanPeriod} months
                 </label>
-                <Slider id="loan-term" defaultValue={[36]} max={60} step={12} />
+                <Slider id="loan-term" defaultValue={[loanPeriod]} value={[loanPeriod]} onValueChange={(v) => setLoanPeriod(v[0])} max={12} step={3} />
               </div>
               <div className="space-y-2">
-                <label htmlFor="credit-score" className="text-sm font-medium">
-                  Credit Score Range
-                </label>
-                <Select defaultValue="good">
-                  <SelectTrigger id="credit-score">
-                    <SelectValue placeholder="Select credit score range" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="excellent">Excellent (720+)</SelectItem>
-                    <SelectItem value="good">Good (680-719)</SelectItem>
-                    <SelectItem value="fair">Fair (640-679)</SelectItem>
-                    <SelectItem value="poor">Poor (below 640)</SelectItem>
-                  </SelectContent>
-                </Select>
+                <div className="space-y-2">
+                  <label htmlFor="interest-rate" className="text-sm font-medium">
+                    Interest Rate: 7%
+                  </label>
+                  <br />
+                  <label htmlFor="total-repayment" className="text-sm font-medium">
+                    Total Repayment Amount
+                  </label>
+                  <div id="total-repayment" className="text-lg font-bold">
+                    {(loanAmount * (1 + 0.07 * (loanPeriod / 12))).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}
+                  </div>
+                </div>
               </div>
               <Button className="w-full">Check Your Rate</Button>
               <p className="text-xs text-center text-zinc-500 dark:text-zinc-400">
@@ -300,7 +286,7 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger>What if I have bad credit?</AccordionTrigger>
+                <AccordionTrigger>What if I have bad credit score?</AccordionTrigger>
                 <AccordionContent>
                   We work with borrowers across the credit spectrum. While having good credit can help you qualify for
                   better rates, we consider multiple factors beyond just credit score. We offer options for those with

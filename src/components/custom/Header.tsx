@@ -2,13 +2,11 @@
 import { Wallet, Menu } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import { Button } from '../ui/button'
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -28,27 +26,26 @@ function Header() {
         <div className="flex items-center gap-2">
           <Wallet className="h-6 w-6 text-primary" />
           <Link href="/" className="text-xl font-bold text-primary">
-            <Image src={'/logo.png'} alt='logo' width={100} height={100} />
+            <Image src={'/logo.png'} alt='logo' width={130} height={100} />
           </Link>
         </div>
-        <nav className="hidden md:flex gap-6">
-          <Link href="/" className={`text-sm font-medium hover:text-primary ${isActive('/') ? 'text-primary' : ''}`}>
-            Home
-          </Link>
-          <Link href="/investments" className={`text-sm font-medium hover:text-primary ${isActive('/investments') ? 'text-primary' : ''}`}>
-            Investments
-          </Link>
-          <Link href="/advisor-service" className={`text-sm font-medium hover:text-primary ${isActive('/advisor-service') ? 'text-primary' : ''}`}>
-            Advisor
-          </Link>
-          <Link href="/contact" className={`text-sm font-medium hover:text-primary ${isActive('/contact') ? 'text-primary' : ''}`}>
-            Contact Us
-          </Link>
-        </nav>
+
         <div className="flex items-center gap-4">
-          <Link href={'/application'}>
-            <Button>Get Started</Button>
-          </Link>
+          <nav className="hidden md:flex gap-6">
+            <Link href="/" className={`text-md font-medium hover:text-primary ${isActive('/') ? 'text-primary' : ''}`}>
+              Home
+            </Link>
+            <Link href="/investments" className={`text-md font-medium hover:text-primary ${isActive('/investments') ? 'text-primary' : ''}`}>
+              Investments
+            </Link>
+            <Link href="/advisor-service" className={`text-md font-medium hover:text-primary ${isActive('/advisor-service') ? 'text-primary' : ''}`}>
+              Advisory
+            </Link>
+            <Link href="/contact" className={`text-md font-medium hover:text-primary ${isActive('/contact') ? 'text-primary' : ''}`}>
+              Contact Us
+            </Link>
+          </nav>
+
           <Drawer direction='left' modal={false} onClose={() => setOpen(false)} open={open} dismissible >
             <DrawerTrigger asChild>
               <Menu size={25} className='text-primary lg:hidden sm:block cursor-pointer' onClick={() => setOpen(!open)} />
@@ -74,11 +71,6 @@ function Header() {
                   </Link>
                 </div>
               </DrawerDescription>
-              <DrawerFooter>
-                <Link href={'/application'}>
-                  <Button>Get Started</Button>
-                </Link>
-              </DrawerFooter>
             </DrawerContent>
           </Drawer>
         </div>
