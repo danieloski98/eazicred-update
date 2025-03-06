@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { BarChart, Calendar, DollarSign, PieChart, Wallet } from "lucide-react"
+import { BarChart, BriefcaseBusiness, Calendar, PieChart, Wallet } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
 import { useContactModal } from "@/hooks/use-contact-modal"
@@ -75,10 +75,9 @@ export default function Investments() {
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Minimum investment: $1,000</li>
+                    <li>Minimum investment: NGN1,000,000</li>
                     <li>12-month term</li>
                     <li>Compound interest</li>
-                    <li>Monthly interest payouts available</li>
                     <li>Reinvestment options</li>
                   </ul>
                   <Button onClick={openModal} className="w-full mt-4">Invest Now</Button>
@@ -94,11 +93,10 @@ export default function Investments() {
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Minimum investment: $500</li>
+                    <li>Minimum investment: NGN500,000</li>
                     <li>6-month term</li>
-                    <li>Fixed interest rate</li>
+                    <li>Flexible interest rate</li>
                     <li>Interest paid at maturity</li>
-                    <li>Early withdrawal options available</li>
                   </ul>
                   <Button onClick={openModal} className="w-full mt-4">Invest Now</Button>
                 </CardContent>
@@ -180,11 +178,11 @@ export default function Investments() {
               <Card className="bg-primary-foreground text-primary h-44">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <DollarSign className="h-6 w-6" />
+                    <BriefcaseBusiness className="h-6 w-6" />
                     Low Minimum Investment
                   </CardTitle>
                 </CardHeader>
-                <CardContent>Start investing with as little as $500 and grow your wealth over time.</CardContent>
+                <CardContent>Start investing with as little as NGN500,000 and grow your wealth over time.</CardContent>
               </Card>
               <Card className="bg-primary-foreground text-primary h-44">
                 <CardHeader>

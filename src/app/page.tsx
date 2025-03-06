@@ -110,7 +110,7 @@ export default function Home() {
                   <ul className="list-disc list-inside space-y-2">
                     <li>Borrow up to NGN10,000,000</li>
                     <li>Competitive interest rates</li>
-                    <li>Collaterize the asset againts your loan</li>
+                    <li>Collaterize the asset against your loan</li>
                   </ul>
                 </CardContent>
               </Card>
