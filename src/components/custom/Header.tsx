@@ -1,5 +1,5 @@
 'use client'
-import { Wallet, Menu } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import {
@@ -24,9 +24,9 @@ function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Wallet className="h-6 w-6 text-primary" />
+          {/* <Wallet className="h-6 w-6 text-primary" /> */}
           <Link href="/" className="text-xl font-bold text-primary">
-            <Image src={'/logo.png'} alt='logo' width={130} height={100} />
+            <Image src={'/logo.png'} alt='logo' width={160} height={130} />
           </Link>
         </div>
 

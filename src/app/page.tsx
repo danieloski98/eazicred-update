@@ -242,7 +242,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Button className="w-full">Check Your Rate</Button>
               <p className="text-xs text-center text-zinc-500 dark:text-zinc-400">
                 Checking your rate won&apos;t affect your credit score
               </p>

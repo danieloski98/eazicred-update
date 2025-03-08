@@ -71,7 +71,7 @@ export default function Investments() {
                     <BarChart className="h-6 w-6 text-primary" />
                     Annual Investment Plan
                   </CardTitle>
-                  <CardDescription>10% Annual Return on Investment</CardDescription>
+                  <CardDescription>30% Annual Return on Investment</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc pl-5 space-y-2">
@@ -89,7 +89,7 @@ export default function Investments() {
                     <Calendar className="h-6 w-6 text-primary" />
                     6-Month Investment Plan
                   </CardTitle>
-                  <CardDescription>5% Return on Investment in 6 Months</CardDescription>
+                  <CardDescription>28% annaulized Return on Investment in 6 Months</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc pl-5 space-y-2">
@@ -124,7 +124,7 @@ export default function Investments() {
                         htmlFor="investment-amount"
                         className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
-                        Investment Amount ($)
+                        Investment Amount (NGN)
                       </label>
                       <Input
                         id="investment-amount"
@@ -136,13 +136,13 @@ export default function Investments() {
                     </div>
                     <Tabs defaultValue="annual" onValueChange={(value) => setTerm(value)}>
                       <TabsList className="grid w-full grid-cols-2">
-                        <TabsTrigger value="annual">Annual (10% ROI)</TabsTrigger>
-                        <TabsTrigger value="sixmonth">6 Months (5% ROI)</TabsTrigger>
+                        <TabsTrigger value="annual">Annual (30% ROI)</TabsTrigger>
+                        <TabsTrigger value="sixmonth">6 Months (14% ROI)</TabsTrigger>
                       </TabsList>
                     </Tabs>
                     <div className="space-y-2">
                       <h3 className="text-lg font-semibold">Projected Return</h3>
-                      <p className="text-3xl font-bold text-primary">${calculateReturns().toFixed(2)}</p>
+                      <p className="text-3xl font-bold text-primary">NGN{calculateReturns().toFixed(2)}</p>
                       <p className="text-sm text-zinc-500">*This is an estimate. Actual returns may vary.</p>
                     </div>
                     <Button onClick={openModal} className="w-full">Start Investing</Button>
