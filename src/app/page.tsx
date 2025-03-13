@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Link from "next/link"
-import { ArrowRight, BriefcaseBusiness, Gauge, Shield, Wallet } from "lucide-react"
+import { ArrowRight, BriefcaseBusiness, Gauge, Instagram, Shield, Wallet } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -108,13 +108,23 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Borrow up to NGN10,000,000</li>
+                    {/* <li>Borrow up to NGN10,000,000</li> */}
                     <li>Competitive interest rates</li>
                     <li>Collaterize the asset against your loan</li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
+
+            <div className='w-full mt-10 flex justify-center items-center'>
+            <Link href={'/application'}>
+                  <Button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
+                    Start Your Application
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+            </div>
+
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
@@ -143,7 +153,7 @@ export default function Home() {
                   <div className="flex items-center space-x-4 mb-4">
 
                     <div>
-                      <h3 className="font-semibold">Emeka and sons INC.</h3>
+                      <h3 className="font-semibold">Joyce Emmanuel</h3>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Business Loan Customer</p>
                     </div>
                   </div>
@@ -231,14 +241,14 @@ export default function Home() {
               <div className="space-y-2">
                 <div className="space-y-2">
                   <label htmlFor="interest-rate" className="text-sm font-medium">
-                    Interest Rate: 7%
+                    Interest Rate: 5%
                   </label>
                   <br />
                   <label htmlFor="total-repayment" className="text-sm font-medium">
                     Total Repayment Amount
                   </label>
                   <div id="total-repayment" className="text-lg font-bold">
-                    {(loanAmount * (1 + 0.07 * (loanPeriod / 12))).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}
+                    {(loanAmount * (1 + 0.05 * (loanPeriod / 12))).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' })}
                   </div>
                 </div>
               </div>
@@ -265,8 +275,7 @@ export default function Home() {
               <AccordionItem value="item-2">
                 <AccordionTrigger>How long does the application process take?</AccordionTrigger>
                 <AccordionContent>
-                  Our online application takes as little as 5 minutes to complete. Most applicants receive a decision
-                  within minutes, and if approved, funds can be deposited as soon as the next business day.
+                Our online application takes as little as 5 minutes to complete. Most applicants receive a decision within minutes, and if approved, funds can be deposited as soon as the next business day. Change to same day.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
@@ -338,60 +347,28 @@ export default function Home() {
               <div className="flex space-x-4">
                 <Link
                   className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
-                  href="#"
+                  href="https://www.instagram.com/eazicred.ng?igsh=NTc4MTIwNjQ2YQ=="
                 >
-                  <span className="sr-only">Twitter</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-6 w-6"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
+                  <span className="sr-only">Instagram</span>
+                  <Instagram className='text-lg' />
                 </Link>
-                <Link
-                  className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
-                  href="#"
-                >
-                  <span className="sr-only">GitHub</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-6 w-6"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                  </svg>
-                </Link>
+      
               </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <h3 className="font-semibold">Product</h3>
                 <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#loans">
                     Personal Loans
                   </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#loans">
                     Business Loans
                   </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
-                    Home Improvement
+                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#laons">
+                    Asset Financing Loans
                   </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#process">
                     How It Works
                   </Link>
                 </nav>
@@ -400,18 +377,21 @@ export default function Home() {
                 <h3 className="font-semibold">Company</h3>
                 <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-500 dark:text-gray-400">
 
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="/contact">
                     Contact
                   </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="/privacy-policy">
                     Privacy Policy
+                  </Link>
+                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="/terms-and-conditions">
+                    Terms and Conditions
                   </Link>
                 </nav>
               </div>
             </div>
           </div>
           <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2023 Eazicred. All rights reserved.
+            © 2025 Eazicred. All rights reserved.
           </div>
         </div>
       </footer>

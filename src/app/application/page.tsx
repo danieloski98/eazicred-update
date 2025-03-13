@@ -1,14 +1,14 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
+import { Skeleton } from "@/components/ui/skeleton"
+
 
 export default function Application() {
 
-
-
-
+    const [loading, setLoading] = React.useState(true);
     return (
         <div className="flex min-h-screen flex-col">
             <Header />
@@ -27,7 +27,41 @@ export default function Application() {
                         <div className="sm:mx-3 lg:mx-auto max-w-5xl sm:w-full flex justify-center ">
                             <div className="sm:w-full lg:w-[50%] pb-6">
 
-                                <iframe width="100%" style={{ minHeight: '1000px', padding: '5px' }} src="https://x.loandisk.com/form_api/iframe.php?formSlug=L1MjtT58VAmNfHcYpIU7uWa4Dek692"></iframe>
+                                {loading &&
+                                    <div className="loading-spinner w-full mt-6">
+
+                                        <div className="flex items-center space-x-4 mb-10">
+                                            <div className="space-y-2">
+                                                <Skeleton className="h-8 w-[250px]" />
+                                                <Skeleton className="h-8 w-[200px]" />
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center space-x-4 mb-10">
+                                            <div className="space-y-2">
+                                                <Skeleton className="h-8 w-[250px]" />
+                                                <Skeleton className="h-8 w-[200px]" />
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center space-x-4 mb-10 w-full">
+                                            <div className="space-y-2">
+                                                <Skeleton className="h-8 w-[250px]" />
+                                                <Skeleton className="h-8 w-[200px]" />
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center space-x-4 mb-10 w-full">
+                                            <div className="space-y-2">
+                                                <Skeleton className="h-8 w-[250px]" />
+                                                <Skeleton className="h-8 w-[200px]" />
+                                            </div>
+                                        </div>
+
+                                    </div>}
+
+                                <iframe width="100%" style={{ minHeight: '1000px', padding: '5px' }} src="https://x.loandisk.com/form_api/iframe.php?formSlug=L1MjtT58VAmNfHcYpIU7uWa4Dek692" onLoad={() => setLoading(false)}
+                                    onError={() => setLoading(false)}></iframe>
 
                             </div>
                         </div>

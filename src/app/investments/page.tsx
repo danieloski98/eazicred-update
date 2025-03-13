@@ -45,7 +45,9 @@ export default function Investments() {
                 Choose from our competitive investment options and watch your money grow.
               </p>
               <div className="space-x-4">
-                <Button size="lg" onClick={openModal}>Start Investing</Button>
+                <Link href={'/investments/application'}>
+                  <Button size="lg" onClick={openModal}>Start Investing</Button>
+                </Link>
                 {/* <Button variant="outline" size="lg">
                   Learn More
                 </Button> */}
@@ -64,7 +66,7 @@ export default function Investments() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2">
+            <div className="mx-auto flex justify-center max-w-5xl items-center gap-6 py-12 ">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -80,10 +82,12 @@ export default function Investments() {
                     <li>Compound interest</li>
                     <li>Reinvestment options</li>
                   </ul>
-                  <Button onClick={openModal} className="w-full mt-4">Invest Now</Button>
+                  <Link href="/investments/application">
+                    <Button  className="w-full mt-4">Invest Now</Button>
+                  </Link>
                 </CardContent>
               </Card>
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Calendar className="h-6 w-6 text-primary" />
@@ -93,14 +97,14 @@ export default function Investments() {
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Minimum investment: NGN500,000</li>
+                    <li>Minimum investment: NGN1,000,000</li>
                     <li>6-month term</li>
                     <li>Flexible interest rate</li>
                     <li>Interest paid at maturity</li>
                   </ul>
                   <Button onClick={openModal} className="w-full mt-4">Invest Now</Button>
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </section>
@@ -145,7 +149,9 @@ export default function Investments() {
                       <p className="text-3xl font-bold text-primary">NGN{calculateReturns().toFixed(2)}</p>
                       <p className="text-sm text-zinc-500">*This is an estimate. Actual returns may vary.</p>
                     </div>
-                    <Button onClick={openModal} className="w-full">Start Investing</Button>
+                    <Link href="/investments/application">
+                      <Button className="w-full">Start Investing</Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -252,7 +258,9 @@ export default function Investments() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg" onClick={openModal}>Open an Investment Account</Button>
+                <Link href="/investments/application">
+                  <Button size="lg" >Open an Investment Account</Button>
+                </Link>
                 <Button variant="outline" size="lg" onClick={openModal}>
                   Speak to an Advisor
                 </Button>
@@ -265,14 +273,14 @@ export default function Investments() {
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row md:py-0">
           <div className="flex items-center gap-4 px-8 md:px-0">
             <p className="text-center text-sm leading-loose text-zinc-500 md:text-left dark:text-zinc-400">
-              © 2023 Eazicred. All rights reserved.
+              © 2025 Eazicred. All rights reserved.
             </p>
           </div>
           <nav className="flex items-center gap-4 sm:gap-6">
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            <Link className="text-sm font-medium hover:underline underline-offset-4" href="/terms-and-conditions">
               Terms of Service
             </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            <Link className="text-sm font-medium hover:underline underline-offset-4" href="/privacy-policy">
               Privacy
             </Link>
           </nav>

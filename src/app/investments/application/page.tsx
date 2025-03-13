@@ -1,16 +1,15 @@
 "use client"
 
-import React from "react"
+import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/custom/Header"
 import { Skeleton } from "@/components/ui/skeleton"
 
+export default function InvestmentApplication() {
 
-export default function ContactUs() {
-
-  const [loading, setLoading] = React.useState(true);
+    const [loading, setLoading] = React.useState(true);
 
 
   return (
@@ -21,7 +20,7 @@ export default function ContactUs() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Get in Touch
+                Invest now
               </h1>
               <p className="mx-auto max-w-[700px] text-zinc-500 md:text-xl dark:text-zinc-400">
                 We&apos;re here to help. Send us a message and we&apos;ll respond as soon as possible.
@@ -30,7 +29,7 @@ export default function ContactUs() {
             <div className="mx-auto grid max-w-5xl sm:w-full  items-center gap-6 py-12 lg:grid-cols-2">
               <Card>
                 <CardHeader>
-                  <CardTitle>Contact Us</CardTitle>
+                  <CardTitle>Open an investment account</CardTitle>
                   <CardDescription>Fill out the form below to send us a message.</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -61,9 +60,14 @@ export default function ContactUs() {
 
                       
                 </div>}
-
-                  <iframe width="100%" style={{ minHeight: '500px', padding: '5px' }} allowFullScreen src="https://x.loandisk.com/form_api/iframe.php?formSlug=REPjUVylX0YT3FArd7wtioxOfgekCh" onLoad={() => setLoading(false)}
-                    onError={() => setLoading(false)}></iframe>
+                <iframe
+                    width="100%"
+                    style={{ minHeight: '500px', padding: '5px' }}
+                    allowFullScreen
+                    src="https://x.loandisk.com/form_api/iframe.php?formSlug=H9VFhGUP3pzK4MBi6A7XnLRtIbwYWo"
+                    onLoad={() => setLoading(false)}
+                    onError={() => setLoading(false)}
+                ></iframe>
 
                 </CardContent>
               </Card>
