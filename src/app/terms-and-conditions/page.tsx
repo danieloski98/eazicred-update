@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
+import Footer from "@/components/custom/Footer"
 
 export default function TermsAndConditions() {
     return (
@@ -64,11 +65,7 @@ export default function TermsAndConditions() {
                     </div>
                 </div>
             </main>
-            <footer className="border-t py-6 md:py-8">
-                <div className="container flex flex-col items-center justify-center gap-4 text-center md:gap-6">
-                    <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Eazicred. All rights reserved.</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     )
 }

@@ -3,9 +3,9 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MapPin, Phone } from "lucide-react"
-import Link from "next/link"
 import Header from "@/components/custom/Header"
 import { Skeleton } from "@/components/ui/skeleton"
+import Footer from '@/components/custom/Footer';
 
 export default function InvestmentApplication() {
 
@@ -95,23 +95,7 @@ export default function InvestmentApplication() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t bg-zinc-50 py-6 dark:bg-zinc-900">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row md:py-0">
-          <div className="flex items-center gap-4 px-8 md:px-0">
-            <p className="text-center text-sm leading-loose text-zinc-500 md:text-left dark:text-zinc-400">
-              © 2023 Eazicred. All rights reserved.
-            </p>
-          </div>
-          <nav className="flex items-center gap-4 sm:gap-6">
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-              Terms of Service
-            </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-              Privacy
-            </Link>
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

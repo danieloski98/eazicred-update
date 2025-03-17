@@ -1,13 +1,14 @@
 'use client'
 import React from 'react';
 import Link from "next/link"
-import { ArrowRight, BriefcaseBusiness, Gauge, Instagram, Shield, Wallet } from "lucide-react"
+import { ArrowRight, BriefcaseBusiness, Gauge, Shield } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Slider } from "@/components/ui/slider"
 import Header from "@/components/custom/Header"
+import Footer from '@/components/custom/Footer';
 
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-primaryColor">
-                  Fast, Flexible Loans for Your Future
+                  Fast, Flexible Loans on the go.
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                   Get the funding you need with competitive rates and a seamless online application process.
@@ -333,68 +334,9 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="w-full py-6 bg-gray-100 dark:bg-gray-800">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="flex flex-col space-y-4">
-              <Link className="flex items-center space-x-2" href="/">
-                <Wallet className="h-6 w-6" />
-                <span className="font-bold">Eazicred</span>
-              </Link>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Fast, flexible loans for your future. Eazicred is a financial technology company, not a bank.
-              </p>
-              <div className="flex space-x-4">
-                <Link
-                  className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
-                  href="https://www.instagram.com/eazicred.ng?igsh=NTc4MTIwNjQ2YQ=="
-                >
-                  <span className="sr-only">Instagram</span>
-                  <Instagram className='text-lg' />
-                </Link>
-      
-              </div>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <h3 className="font-semibold">Product</h3>
-                <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#loans">
-                    Personal Loans
-                  </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#loans">
-                    Business Loans
-                  </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#laons">
-                    Asset Financing Loans
-                  </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="#process">
-                    How It Works
-                  </Link>
-                </nav>
-              </div>
-              <div>
-                <h3 className="font-semibold">Company</h3>
-                <nav className="mt-4 flex flex-col space-y-2 text-sm text-gray-500 dark:text-gray-400">
+     
+     <Footer />
 
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="/contact">
-                    Contact
-                  </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="/privacy-policy">
-                    Privacy Policy
-                  </Link>
-                  <Link className="hover:text-gray-600 dark:hover:text-gray-300" href="/terms-and-conditions">
-                    Terms and Conditions
-                  </Link>
-                </nav>
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2025 Eazicred. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
