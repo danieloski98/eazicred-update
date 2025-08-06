@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Eazicred",
-  description: "Loans thats change lives",
+  description: "Loans that change lives",
 };
 
 export default function RootLayout({
